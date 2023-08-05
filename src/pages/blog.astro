@@ -1,5 +1,8 @@
 ---
+import "../style/global.css";
+
 const pageTITLE = "my learning blog";
+const mecolor = "red";
 ---
 
 <html lang="en">
@@ -9,6 +12,11 @@ const pageTITLE = "my learning blog";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTITLE}</title>
+    <style define:vars={{mecolor}}>
+      .me {
+        color: var(--mecolor); 
+      }
+    </style>
   </head>
 
   <body>
@@ -17,7 +25,7 @@ const pageTITLE = "my learning blog";
     <a href="/blog/">blog</a>
 
     <h1>{pageTITLE}</h1>
-    <h1>My Astro Learning Blog</h1>
+    <h1 class="me">My Astro Learning Blog</h1>
     <p>This is where I will post about my journey learning Astro.</p>
     <ul>
       <a href="/post/post-1">post 1</a>

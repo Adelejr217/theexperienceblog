@@ -1,5 +1,7 @@
 ---
+import "../style/global.css";
 const pageTITLE = "Home page";
+
 ---
 
 <html lang="en">
@@ -9,14 +11,13 @@ const pageTITLE = "Home page";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTITLE}</title>
+    <style></style>
   </head>
 
   <body>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about/">About</a>
-      <a href="/blog/">blog</a>
-    </nav>
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/blog/">blog</a>
 
     <h1>{pageTITLE}</h1>
   </body>
